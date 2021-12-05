@@ -24,3 +24,13 @@ def problem2(commands: list[tuple[str, int]]) -> int:
         elif word == "down":
             cur_aim += value
     return cur_depth * cur_pos
+
+
+if __name__ == "__main__":
+    with open("input.txt") as f:
+        raw: list[str] = [x.split() for x in f.read().splitlines()]
+    data: list[tuple[str, int]] = []
+    for ele in raw:
+        data.append((ele[0], int(ele[1])))
+    print("solution 1:", problem1(data))
+    print("solution 2:", problem2(data))

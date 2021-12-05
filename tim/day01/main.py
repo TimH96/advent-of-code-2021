@@ -22,4 +22,7 @@ def problem2(scannings: list[int]) -> int:
 
 
 if __name__ == "__main__":
-    pass
+    with open("input.txt") as f:
+        data: list[int] = [int(x) for x in f.read().splitlines()]
+    print("solution 1:", problem1(data))
+    print("solution 2:", problem2(data))

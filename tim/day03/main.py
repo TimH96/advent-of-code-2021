@@ -34,3 +34,10 @@ def problem2(diagnostic_report: list[str]) -> int:
                 sol[k] = int(remaining[0], 2)
                 break
     return sol[0] * sol[1]
+
+
+if __name__ == "__main__":
+    with open("input.txt") as f:
+        data: list[str] = f.read().splitlines()
+    print("solution 1:", problem1(data))
+    print("solution 2:", problem2(data))
