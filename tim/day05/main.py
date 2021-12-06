@@ -1,6 +1,4 @@
-from typing import Callable, Counter
 from datapoint import DataPoint
-from itertools import chain
 
 
 def problem1(data: list[tuple[DataPoint, DataPoint]], grid_size: int = 1000):
