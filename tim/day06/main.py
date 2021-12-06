@@ -13,8 +13,17 @@ def problem1(swarm: list[int], iterations: int) -> int:
 
 
 def problem2(fish: int, iterations: int) -> int:
-    return (iterations/6)**2 + (iterations/8)**2
-
+    def single_fish(fish: int, iterations: int) -> int:
+        offspawn: int = 0
+        remaining: int = iterations
+        while True:
+            if fish > remaining:
+                return 1
+            else:
+                offspawn += single_fish(8, remaining)
+                remaining -= 6
+    
+    return single_fish(fish, iterations)
 
 if __name__ == "__main__":
     with open("input.txt") as f:
@@ -23,4 +32,4 @@ if __name__ == "__main__":
     # print("solution 2:", problem1(3, 256))
     bla = [0]
     print(problem1(bla, 80))
-    print(problem2(0, 80))
+    print(problem2(3, 11))
