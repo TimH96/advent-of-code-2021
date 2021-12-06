@@ -23,7 +23,7 @@ def problem2(swarm: list[int], iterations: int) -> int:
         fishes[7] += fishes[0]
         fishes.rotate(-1)
     return sum(fishes)
-    
+
 
 if __name__ == "__main__":
     with open("input.txt") as f:
