@@ -1,5 +1,5 @@
 from typing import Callable
-from datapoint import DataPoint
+from common.datapoint import DataPoint
 
 
 def problem1(data: list[tuple[DataPoint, DataPoint]], grid_size: int = 1000):
@@ -60,7 +60,7 @@ def problem2(data: list[tuple[DataPoint, DataPoint]], grid_size: int = 1000):
 
 
 if __name__ == "__main__":
-    with open("input.txt") as f:
+    with open("input05.txt") as f:
         data: list[tuple[DataPoint, DataPoint]] = [
             (DataPoint(z[0][0], z[0][1]), DataPoint(z[1][0], z[1][1]))
             for z in [

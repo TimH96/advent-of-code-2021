@@ -1,4 +1,4 @@
-from bingo import BingoBoard
+from common.bingo import BingoBoard
 
 
 def problem1(numbers: list[int], raw_boards: list[str]) -> int:
@@ -21,7 +21,7 @@ def problem2(numbers: list[int], raw_boards: list[str]) -> int:
 
 
 if __name__ == "__main__":
-    with open("input.txt") as f:
+    with open("input04.txt") as f:
         raw = f.read().split("\n\n")
         numbers: list[int] = [int(x) for x in raw[0].split(",")]
         raw_boards: list[str] = raw[1:]
