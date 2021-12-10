@@ -1,7 +1,8 @@
-def problem1(heightmap: list[list[int]]) -> int:
+def get_lowpoints(heightmap: list[list[int]]) -> list[tuple[int, int]]:
     t: int = 0
     L: int = len(heightmap[0])
     H: int = len(heightmap)
+    lowpoints: list[int] = []
     for i, row in enumerate(heightmap):
         for j, height in enumerate(row):
             smallest: bool = True
@@ -10,8 +11,13 @@ def problem1(heightmap: list[list[int]]) -> int:
                     continue
                 smallest = min(smallest, height < heightmap[x][y])
             if smallest:
-                t = t + 1 + heightmap[i][j]
-    return t
+                lowpoints.append((i, j))
+    return lowpoints
+
+
+def problem1(heightmap: list[list[int]]) -> int:
+    t = get_lowpoints(heightmap)
+    return len(t) + sum([heightmap[x][y] for (x, y) in t])
 
 
 if __name__ == "__main__":
