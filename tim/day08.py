@@ -7,10 +7,6 @@ def problem1(signals: list[tuple[str, str]]) -> int:
 
 
 def problem2(signals: list[tuple[str, str]]) -> int:
-    # 2 len5 and compare with 4
-    # 3 len5 and - 1 -> len3
-    # 5 len5 and compare with 4
-
     t: int = 0
 
     for raw_signal in signals:
