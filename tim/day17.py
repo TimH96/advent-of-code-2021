@@ -53,15 +53,6 @@ def problem1(
 def problem2(
     target: tuple[tuple[int, int], tuple[int, int]], y_search_radius: int = 200
 ) -> int:
-    nth_triangle = lambda x: round((x ** 2 + x) / 2)
-
-    # assuming target area with positive x
-    mx: int = 0
-    for x in count(0):
-        if nth_triangle(x) > target[0][1]:
-            mx = x
-            break
-
     t: int = 0
     # see problem1 for note about cringe exit criteria here
     for y in range(target[1][0], y_search_radius):
