@@ -1,3 +1,5 @@
-Just a shared repo of a couple of nerds for solutions to advent of code 2021.
+[AOC2021](https://adventofcode.com/2021)
 
-Find out more [here](https://adventofcode.com/2021).
+I did everything in Python because comfort.
+I prioritized readable and clean code over performance, and genuinely looked for working solution rather than looking for the best.
+I stopped when the problems got too annoying every single day cause ain't nobody got time for that.
